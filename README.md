@@ -1,7 +1,5 @@
-#A Software Engineer's Swiss Knife
-
+Introduction
 ==================================
-A software engineer's swiss knife.
 
-Handbook created for CSEN603 2015 course to make the path to becoming a software engineer just a little easier.
 
+// We should enter some intro text about the 
