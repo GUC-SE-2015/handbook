@@ -1,6 +1,4 @@
-#A Software Engineer's 
-#Swiss Knife
-
+#A Software Engineer's Swiss Knife
 
 ==================================
 A software engineer's swiss knife.
