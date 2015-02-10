@@ -2,7 +2,7 @@
 title: SE Handbook
 description: > # this means to ignore newlines until "baseurl:"
   Handbook for software engineering CSEN 603 GUC.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/handbook" # the subpath of your site, e.g. /blog/
 url: "https://guc-se-2015.github.io/handbook/" # the base hostname & protocol for your site
 github_username:  GUC-SE-2015
 
