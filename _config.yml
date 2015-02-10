@@ -5,7 +5,9 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/handbook" # the subpath of your site, e.g. /blog/
 url: "https://guc-se-2015.github.io/handbook/" # the base hostname & protocol for your site
 github_username:  GUC-SE-2015
-
+sass:
+  sass_dir: _scss
+  style: :expanded
 # Build settings
 markdown: redcarpet
 authors:
