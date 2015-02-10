@@ -1,0 +1,134 @@
+---
+layout: post
+title: Intro to Software Architecture 
+categories: design architecture software api business-model SaaS PaaS IaaS
+author: ahmed
+date: 2015-02-10
+---     
+
+#Web API
+
+##API and REST
+API stands for Application Programming Interface, but what does that mean?
+Well a typical definition is the following “A set of protocols and routines for building software”.
+You have actually used APIs before, for example during the game course you used the swing API to build a UI. During the networks course you used the Java thread API to create concurrent programs. So what is an API? Well it's a way of exposing/defining a software component (read library, program, service) in terms of it's operations. As in what it does. A typical API documentation could be
+a set of functions, along with the parameter types and their semantics, a description of the return value semantics of the operation and possible exceptional cases, Like what does this quicksort implementation do with duplicates.
+
+Taking SWING as an example, it defines some classes such as JFrame, JButton, JMenu, JEtc.
+The swing API enables other programmers (read you) to create a UI for their Java applications.
+They provide a service through a set of classes and functions. That set is the API.
+How to create a window, change its title, show and hide it, etc.
+
+Another example is the Document Object Model (DOM) used in browsers to manipulate HTML documents. i.e hide an element if you click a button and all kinds of fun stuff.
+
+Okay so what does this have to do with the web and this course?
+
+Well the web has APIs too. You can provide a service and expose its API to the world.
+
+As an example let's consider how a lot of websites out there have some sort of Q&A, either for technical support, educational purposes (like this course and piazza), or some other reason.
+Now implementing a proper Q&A platform (like StackExchange or Piazza) is no easy task and it would be better for everyone if people used existing “libraries” to add this functionality, like how you used Swing in the game course instead of rolling your own GUI toolkit.
+
+This is especially relevant since if you roll your own libraries you will be the one responsible for maintaining it, providing tech support and fixing bugs. Which could get rather expensive.
+
+So how can one create a service that people can just integrate in their own websites and applications (i.e android app)? If we are talking about desktop applications we just create a library, for example a set of Java classes that we package into a nice little JAR file and send out to our clients to use in their programs. This won't work for our Q&A service, thankfully we can expose web APIs for consumption by our clients.
+
+Before we go into more details, let's first introduce something called JSON.
+JSON stands for Javascript Object Notation. What is it? It is a way of encoding data. Basically as dictionaries and arrays.
+
+
+
+
+
+For example if you have a class that represents a Question with fields title, and body, both being strings the following can represent a single question:
+`{ “title”: “How to trim a string in ruby”, “body”: “How can I remove leading and trailing whitespaces in ruby?” }`
+
+JSON is very simple, [this](http://json.org/) small page is about all there is to it 
+
+Web APIs usually transfer data using JSON or XML.
+
+The second term we should define is called REST. You have probably heard that term before. It stands for Representational State Transfer (I guess RST as an acronym looked weird, also TCP called dibbs on RST)
+
+
+So what is REST? And what does it have to do with APIs? Well rest is a an architectural style. That basically means a guideline on how to create web APIs, the idea is really simple. Just use URIs (uniform resource identifiers (read links with structure) and what HTTP already has to create a web service. For example in our fictional Q&A service let's say that we have topics and questions.
+Use the URI /topics/gardening/questions/What-is-the-optimal-spacing-between-potatoes-in-a-garden to refer to a question.
+Use /topics/gardening/questions/What-is-the-optimal-spacing-between-potatoes-in-a-garden/answers to refer to it's answer.
+Use /answers/1 to refer to specific answer by some sort of unique id.
+
+Use HTTP GET methods to get a resource i.e list all answers to question. Or all topics.
+Use HTTP POST to post a new question, etc.
+
+This greatly simplifies things and suddenly people who have never seen your API before can instantly start using it, requiring only minimal documentation such as what the returned JSON looks like.
+
+Like we said REST is a convention, not that different from how in Java we use CamelCase for class names or the architectural style of procedural programming (functions) i.e C or Object Oriented i.e Java. This makes languages such as Java and C++ somewhat similar because the have the same architectural style (though we call them paradigms, for good reasons which are out of this book's scope) This means that RESTful APIs also look very similar, making the easy to understand.
+Like how an ERD makes a database description easier than just dumping SQL or writing a long document in English describing your tables and relationships.
+
+
+###You can learn about REST from the following resources
+[rest tutorial, suggest reading sections 1 through 9, very short sections though, I promise](http://rest.elkstein.org/)
+
+[A short 9 minute video about APIs and REST](https://www.youtube.com/watch?v=7YcW25PHnAA)
+[A slightly longer intro to REST](https://www.youtube.com/watch?v=YCcAE2SCQ6k)
+
+
+
+
+###API Examples
+[Dropbox](https://www.dropbox.com/developers/core/docs)
+[Google Drive](https://developers.google.com/drive/v2/reference/)
+[Facebook Graph API](https://developers.facebook.com/docs/graph-api/reference/v2.0)
+
+
+
+
+###HTTP Method reference
+[The actual standard](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)
+
+[Wikipedia can serve as a good to the point reference on protocols](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+
+[HTTP methods within the context of REST](http://www.restapitutorial.com/lessons/httpmethods.html)
+
+
+
+
+
+#Software as a Service
+Ok so now that we know how customers can use our Q&A service on their websites let's see how we can make money off of it. The classical model for making money from software is to simply sell it. For example you pay a hefty price to buy Microsoft Windows and you get to use it. Same with something like Microsoft Office. You simply buy it. This is adopted from hardware products like how you just buy a car once.
+
+But there is a problem there. One the clients have to install the product on their own servers, costing them additional maintenance and they need to have an IT department that can handle it.
+Two it's usually expensive.
+
+So there is this model called Software as a Service, which simply means the software is provided to you as a service by someone else. Usually without installing any programs on your end.
+For example Google Drive. What we can do with our Q&A service is perhaps offer a basic subscription that allows up to say.. 100 topics and a 1000 users for free and other plans with monthly or yearly subscriptions that increase the limit. That's it ! That's what software as a service is.
+
+Back to our car analogy, you may be thinking SaaS is the equivalent of renting a car. Well that's not really accurate. SaaS is more like paying the GUC an extra subscription fee to get to use its bus services. You don't get a specific bus, you get to use any of its busses from and to any of its stops.
+Another example is making a contract with a transportation service to provide your company with a fleet of cars and drivers to take your employees where they need to go. For example sending your engineers to remote off site locations in the middle of the desert. Or a contract with a travel agency to send your employees to international conferences and provide accommodations for them. Instead of buying your own accommodations and plain tickets/ aircraft.
+
+There are also Platform as a Service (PaaS) and Infrastructure as a Service (IaaS).
+
+##Short description of PaaS
+Its when you pay someone to run your application and manage everything except for your code.
+
+You give them money, they give you a chunk of "cloud" that includes compute power, networking, and the software stack required to run your application.
+
+Basically is the class of services things like google app engine falls in, providing the abstraction of you just dropping in your software and having it run as long as you pay them.
+
+[two minute video that explains SaaS](https://www.youtube.com/watch?v=kGUPSvswmY0)
+
+[ Article that talks about SaaS and Agile](https://medium.com/@johizzle/entering-saas-engineering-side-of-programming-part-3-soa-saas-307bc82314fb)
+
+[Building a SaaS product](https://medium.com/@tylertringas/bootstrap-a-saas-business-with-these-services-fa40983c0586)
+
+
+
+Back to our platform as a service, once we actually finish the product we can use a platform provider like Heroku to host our application without having to buy and maintain our own servers. This way we can the expensive maintenance of a server farm and only pay for what we need right now and scale (read get more powerful servers, or simply bigger quantity off) when we need to. This allows us to deploy our service without having to grow our company in terms of employees and infrastructure which is expensive.
+
+Essentially outsourcing our hardware requirements. Take a look at [Heroku pricing](https://www.heroku.com/pricing) to get a better understanding of the concept of scaling
+
+
+
+
+
+
+
+
+

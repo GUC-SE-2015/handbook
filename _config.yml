@@ -1,0 +1,25 @@
+# Site settings
+title: SE Handbook
+description: > # this means to ignore newlines until "baseurl:"
+  Handbook for software engineering CSEN 603 GUC.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+github_username:  GUC-SE-2015
+
+# Build settings
+markdown: redcarpet
+authors:
+  nourhan:
+    name: Nourhan Mohammed
+    display_name: Nourhan
+    email: nourhan.abdeltawab@gmail.com
+    github: NourhanMohamed
+  ahmed:
+    name: Ahmed Hisham
+    display_name: ahi
+    email: ahm3d.hisham@gmail.com
+    github: ah450
+  adam:
+    name: Adam Ghanem
+    display_name: adamgg
+    email: ghanem.adam@gmail.com

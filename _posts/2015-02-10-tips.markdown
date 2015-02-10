@@ -1,0 +1,249 @@
+---
+layout: post
+title: Tips and Tricks
+categories: general
+author: ahmed
+date: 2015-02-10
+---     
+      
+#Tips and Tricks
+
+[Advanced Google Search](https://support.google.com/websearch/answer/2466433?rd=1)
+
+
+###How to ask a question
+First start by searching, the internet is a big place. It's likely that someone else faced the same problem and found a solution.
+
+Read [this](https://stackoverflow.com/help/how-to-ask)
+
+
+If it's code related make sure it is a [short, contained, compilable example.](http://sscce.org/)
+
+Make sure you post to a relevant site.
+
+Stackoverflow is really good for code related issues. However their parent site https://stackexchange.com/ has sites for everything from white board programming, to user experience, theoretical computer science, science fiction and even building and repairing bicycles.
+
+There is also [Quora](https://www.quora.com)
+
+What is the difference? Well StackExchange and all of it's related sites are for questions that can be answered by an expert. They excel at that and are much better than quora and more reliable when it comes to expertise. Meaning that there is an answer which can be deemed quantitatively better than any other answer. On the other hand Quora is best suited for open ended questions, completely opinion based questions and things like where to find good internship opportunities in X or is the GUC program actually any good or what's the difference between DMET and CSEN. Stuff like that.
+
+Never stop questioning. Curiosity is humanity's greatest asset.
+
+> There is always a place I can take someone's curiosity and land where they end up enlightened when we're done. That's my challenge as an educator. No one is dumb who is curious. The people who don't ask questions remain clueless throughout their lives.”
+> --- <cite>Neil deGrasse Tyson</cite>
+
+##The XY problem
+
+The XY problem is about the common issue of asking for help with your attempted solution, instead of the actual problem you wanted to solve.
+Please read [this](http://xyproblem.info/)
+
+
+
+
+
+
+
+
+
+##Debugging
+
+###The Rubber Duck
+A rubber duck is probably the most potent debugging tool in any programmer's arsenal. Use it wisely.
+
+Learn about rubber ducking [here](http://www.rubberduckdebugging.com/)
+
+**Note: Other rubber animals allowed**
+
+
+{% include image.html url="/assets/duck.jpg" description="A loyal duck" %}
+
+
+
+
+
+
+
+[How to debug small programs](http://ericlippert.com/2014/03/05/how-to-debug-small-programs/)
+A good read.
+
+###Print Debugging
+`System.out.println("Is this line reached")`, This technique can often point you in the correct direction but is usually inefficient. And requires you to re-run the program if you want more details.
+Instead you should consider using debuggers and having breakpoints in your code.
+A debugger allows you to trace every aspect of your program while it's running. You can go back, skip forward, skip functions, modify code, inspect variables, watch for certain changes and be notified.
+A breakpoint is something that tells your debugger to pause when program execution reaches that line.
+For Javascript checkout [chrome dev tools](https://developer.chrome.com/devtools)
+Languages like Python, Ruby, etc. Have their own debuggers. Which are usually integrated in any good IDE for them.
+
+##The wolf fence algorithm
+>There's one wolf in Alaska, how do you find it? First build a fence down the middle of the state, wait for the wolf to howl, determine which side of the fence it is on. Repeat process on that side only, until you get to the point where you can see the wolf). In other words; put in a few "print" statements until you find the statement that is failing (then maybe work backwards from the "tracks" to find out where the wolf/bug comes from)."
+> --- <cite>[paper](https://dl.acm.org/citation.cfm?id=358690.358695)</cite>
+
+
+
+
+
+###Test Driven Development
+Write a test (that fails at the start), then write enough code to make that test succeed.
+
+[Wikipedia](https://en.wikipedia.org/wiki/Test-driven_development#Test-driven_development_cycle)
+
+Also read up on what unit tests are, and how to properly write them.
+
+[writing good unit tests](http://stackoverflow.com/a/3258768/1345339)
+
+
+[A good read on writing unit tests and what they are actually for, also gives insight on other test types](http://blog.stevensanderson.com/2009/08/24/writing-great-unit-tests-best-and-worst-practises/)
+
+[Explains the difference between unit tests, Integration Tests, Functional Tests and Acceptance Tests](http://stackoverflow.com/a/4904533/1345339)
+
+
+###Documentation Driven Development (DDD)
+Provide documentation, wiki pages, markdown, simple .text files.
+Document the behavior, direction and strategy.
+Use tools and visual aids the get the idea across without the need of spending a lot of time writing long english reports and reading them.
+Such as ERDs, class Diagrams and in source documentation. Like Javadocs there are tools that generate documentation from in source comments.
+Document the behavior of your API.
+Documentation != Long report in English
+Documentation can simply be a sample code snippet explaining how to perform a certain task with your API along with a couple of comments.
+[explains DDD](http://collectiveidea.com/blog/archives/2014/04/21/on-documentation-driven-development/)
+
+
+###Peer reviewing
+Review each others work. A second eye will catch mistakes or deviation from conventions.
+
+###Self review
+When you implement a piece of functionality, test it, review it and go over it. Don't over analyze but don't just assume that it works.
+
+
+
+
+
+
+
+
+
+##Productivity Increasing Tips
+
+###Pair programming
+This is an agile technique, it consists of pairing two developers with one computer. Sounds weird right?
+No, it's not that one gets to use the keyboard and the other the mouse !
+There are two roles to be filled. The driver and the observer.
+The driver actually uses the computer. As in writes the code. The observer well observes and considers the direction of the work. Offering an external 'big picture' view for the coder of the application they are working on. Often detecting bugs in the making (not that different from how a rubber duck can actually help you save your code) The observer acts as a safety net and guides the driver.
+
+[Please read](https://en.wikipedia.org/wiki/Pair_programming) It offers a good explaination.
+
+We recommend a novice-novice pairing.
+
+
+
+##Thinking
+We can think much faster than we can write code. Spend an extra couple of minutes going over your designs. Might save you hours in implementation.
+Doing it right the first time, is faster than having to change your code multiple times.
+
+##Anticipating change
+Don't make implicit assumptions when coding a particular functionality about sanity of input or the state of other modules in your program. Try to make parts of your code isolated, exposing just a simple interface. Don't depend on other classes inner working as it may change. That way when it changes the 10 other classes that interact with it don't have to change as well.
+
+##Proxies
+Write proxies with stubs that simulate modules that aren't complete yet so that you can keep working on your part, while waiting for your colleagues to finish theirs. This is greatly facilitated by documentation driven development.
+
+##Meetings
+Avoid unnecessary meetings, they butcher productivity. It takes time to get from place A to B and meet with your colleagues. It puts you in a different mental state than that of writing code.
+It exposes you to little annoying things through the day that could hinder your productivity. Like traffic jam, bad weather, etc. [read this](http://hyperboleandahalf.blogspot.com/2010/05/sneaky-hate-spiral.html)
+
+But we have to meet, right?
+
+Yes, but don't make it daily. Also consider the timing. Try to schedule meetings at times when productivity is already low anyway. For example a day where your group has a full day at the university and probably won't be coding on campus anyway because they are too tired or there are three quizzes on the same day. That way you don't hinder any productivity, since there was none to start with. Some people are less productive during the afternoon Schedule it then. If your company mostly codes at home then schedule the meetings in a free slot during a day that you are all on campus on.
+
+
+##Eliminate distractions
+
+Stay away from reddit, facebook, HN, etc. Don't think you can just check it for five minutes and get back to work... Those things will consume you ! Only check them when you are actually done with your work.
+Try switching notifications off on a work day from social media, that way facebook can't pull you back in. Put your phone on silent that way you can check messages on your own time instead of being pulled whenever someone says something on whatsapp.
+
+In other words setup your environment in a way such that when you start working on a task, nothing can pull you away from it. Only you can actively go check other things when you are done.
+
+
+##ToDo lists
+Avoid long to do lists that plan the whole project/semester spanning multiple courses and pet projects.
+Simply do a todolist at night for the tasks that you need to do tomorrow. That way it won't look like it's too big. Won't make you lose all hope if you slightly fall behind. The list should be like 3-5 important tasks. Don't fall for huge lists, those never work out and just end up making you feel bad !
+
+
+##Batch Tasks
+Do things at batch when you have time for them.
+Let's say you started working on the tasks you wrote last night, you have completed one or two of them. You have ignored messages, emails and social media updates in order to concentrate. Now you are done with your task. Now go check and reply to all of your emails. Check the messages you got. Comment on Yusra's latest selfie, etc. Time yourself so that you don't get lost and waste hours on facebook/reddit/the likes and then make coffee and start working on task number two !
+
+
+
+##Automation
+Automate your tasks, automate and automate like there is no tomorrow ! Not only does it save you time. It allows you to concentrate and avoid switching between different tasks. It also increases your life satisfaction by not having to do tedious labor. Use your education to make your life better !
+
+
+##Work and play alternation
+
+Allocate actual time periods, now that doesn't mean making a timed schedule for the entire day.
+Just follow a framework. For example 45 minutes of work followed by 15 minutes of break. That's how you're working hour should be.
+Let's say you went for 45 followed by 15. How do you stick to it?
+Well first force yourself to do the 45 minutes continuously. Don't take the break in the middle approach.
+Try to use the 15 minutes to get away from the screen and give your eyes a break. Don't just spend them on social media or reading articles. Get up and move !
+
+Think of the 15 minutes as a reward for doing the 45 minutes of continuous work.
+
+##Write things down
+Make writing things down a habit. New ideas, new approaches to solving a problem, a reminder for something to do. Don't overload your brain with having to remember stuff. Focus on your current goal instead.
+
+##Know your editor
+Spend some time getting familiar with our editor, know the shortcuts, read some documentation, play with and customize it. All IDEs have many tricks and shortcuts that can save you hours.
+
+
+
+
+
+
+
+
+
+##Find your zone
+This is different for each person. Find the times that you rather work in, afternoon? Early morning? On campus? At home? At starbucks?
+
+Keep developing your work framework (how you schedule tasks,alternate work and play) till it suits you. Being in the zone is when your mind is totally concentrated on a task or problem and you lose track of time. There is just you and the editor. Making sweet sweet code. This is a well known and elusive state for programmers. The trigger for this magical in the zone flow is different for each programmer. We must find it and then put ourselves in a position where it is more likely to happen.
+
+When that happens make sure you are in a distraction free zone, interruptions can totally destroy your focus and flow.
+
+
+
+
+##When designing don't implement
+When you are working on design, don't get bogged down in implementation.
+Don't think about how you are going to implement the specifics or about special cases. Just design the system. i.e put your designer's hat on. Same goes when working on UX.
+
+
+##Programming is a cognitive skill not manual labor
+Don't try to work for 8 hours, don't strain yourself by saying I will use my day off to work on all of my projects and nothing else ! It requires a clear state of mind. That means you need to sleep enough, meet friends, etc. In order to stay in the right mental zone.
+
+
+##Keep it Simple Stupid (KISS)
+Don't spend too much time over designing stuff and trying to find the best/simplest solution to a problem. Just do something that works and is robust. Unless you are really pressed for let's say efficiency and are working with large amounts of data. Don't spend a lot of time complicating things and don't over use design patterns. Just keep it simple and working. Not all software is rocket science.
+
+
+##Less Code Equals Less bugs
+Don't reinvent wheels, don't try to make APIs that are the most generic reusable in a quasi-orgasmic blaze of design that the world has ever seen !
+Keep things simple, less code means less places for bugs to creep and less maintenance
+Use libraries and existing frameworks, combine them to accomplish your task. Don't roll out your own.
+
+
+
+
+
+
+##Stay Up to Date
+Use new Technologies, new libraries, new environments. Keep up to date (stick to stable versions)
+stick to tools that are alive in development (actively releasing). Keep track of advancements that way you can solve new problems with new tools when you encounter them for the first time.Instead of having to do research and pause your work.
+
+
+##Fix issues and bugs immediately
+When an issue is reported, fix it before working on something else. This avoids the situation where other parts build on top of the buggy functionality need to be changed when you fix the bug.
+
+
+
+
+

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+    <ul class="post-list">
+    {% for post in site.posts %}
+    {% assign author = site.authors[post.author] %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+       <p class="byline">
+             by {{ author.name }}
+       </p>
+        <ul style="list-style-type: none;">
+              {% for tag in post.categories %}
+              <li style="display: inline;">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+        </ol>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

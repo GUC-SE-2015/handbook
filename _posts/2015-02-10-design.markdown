@@ -1,0 +1,119 @@
+---
+layout: post
+title: Web Design
+categories: design ux ui
+author: adam
+date: 2015-02-10
+---
+### What you can learn from Google’s Material Design
+[here](http://webdesign.tutsplus.com/articles/what-you-can-learn-from-googles-material-design--cms-22516)
+
+### Basic colour theory for web designers
+[there](http://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)
+
+### How design works
+[over here](https://startupsthisishowdesignworks.com)
+### Ten principles for good design
+[over there](http://en.wikipedia.org/wiki/Dieter_Rams#Dieter_Rams:_ten_principles_for_good_design)
+
+### Objectified
+[Trailer](https://www.youtube.com/watch?v=S9E2D2PaIcI&list=PLG7_y8_uKhd71_RyV1m0nc5BtDzeecgiP&index=1)
+[Playlist](https://www.youtube.com/playlist?list=PL73124D781F8F5DD4)
+
+### Beautiful Typefaces from Google Web Fonts
+[here](http://hellohappy.org/beautiful-web-type/)
+
+### User Experience Basics
+[there](http://www.usability.gov/what-and-why/user-experience.html)
+
+### What is colour?
+[here](http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/)
+
+[and](http://color.hailpixel.com)
+
+[also](http://colourlovers.com)
+### kuler from Adobe
+
+### Don’t overthink grids.
+[give them right amount of think](http://css-tricks.com/dont-overthink-it-grids/)
+
+
+### Iconography
+[Icons for all!](http://www.hanselman.com/blog/TheFloppyDiskMeansSaveAnd14OtherOldPeopleIconsThatDontMakeSenseAnymore.aspx)
+
+### Balsamiq
+
+### UI Design
+[team tree house](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals)
+
+### UI & Capability
+[felt presence](http://www.feltpresence.com/articles/18-ui-and-capability)
+
+### Less Aesthetic, More Design
+[focus there](https://wells.ee/blog/less-aesthetic-more-design)
+
+
+### Five Principles of Interaction Design
+[Asktog](http://asktog.com/atc/principles-of-interaction-design/)
+
+### Simple Enough?
+[52 weeks of UX](http://52weeksofux.com/post/21026021557/what-does-it-mean-to-be-simple)
+
+### Interesting Concept of Thumbnail Sketching
+[Design Shack](http://designshack.net/articles/inspiration/close-photoshop-and-grab-a-pencil-the-lost-art-of-thumbnail-sketches/)
+
+### For The Love Of Wireframes
+[Wire frames!](http://wireframes.tumblr.com)
+
+### UX Metrics
+[UX magz](http://uxmag.com/articles/a-new-formula-for-quantitative-ux-decision-making)
+
+### UX Research Methodology
+[nngroup](http://www.nngroup.com/articles/which-ux-research-methods/)
+
+### Intro To Typography
+[tutsplus](http://design.tutsplus.com/articles/a-20-minute-intro-to-typography-basics--psd-3326)
+
+### Responsive Typography
+[Be responsive](https://ia.net/blog/responsive-typography-the-basics/)
+
+### Responsive Web Design
+[creative blog]([](http://www.creativebloq.com/responsive-web-design/problems-8122790))
+
+[alista part]([](http://alistapart.com/article/responsive-web-design))
+
+
+
+
+
+#Resources+
+
+##Inspiration
+
+1. Dribbble
+1. Behance
+1. Pinterest
+1. Design Awards
+
+
+##Msc.
+1. Netuts
+1. smashingmagazine
+1. HTML5 Rocks
+1. Hack Design
+
+
+##Tools.
+1. Pencil + Paper
+1. AI CS6
+1. Lightroom for quick photo editing
+1. Balsamiq
+
+
+##Books.
+1.  Getting Real
+1. Rework
+
+
+
+
