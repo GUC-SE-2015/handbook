@@ -1,3 +1,0 @@
-# Acknowledgements
-
-// Acks go here
